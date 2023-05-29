@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="shortcut icon" href="img/favi.png" type="image/x-icon">
+    <title>HSJ</title>
+</head>
+<body>
+    <header class="clearFix">
+        <h1>
+            <a href="index.html">HSJ</a>
+        </h1>
+        <div class="nav_P">
+            <ul>
+                <li>
+                    <a href="sub_about.html">About</a>
+                    <img src="img/img_highlighter_mark.png" alt="강조표시">
+                </li>
+                <li>
+                    <a href="sub_work.html">Work</a>
+                </li>
+                <li>
+                    <a href="sub_etc.html">Etc.</a>
+                </li>
+            </ul>
+        </div>
+        <button class="M">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav_M">
+            <ul>
+                <li>
+                    <a href="sub_about.html">About</a>
+                </li>
+                <li>
+                    <a href="sub_work.html">Work</a>
+                </li>
+                <li>
+                    <a href="sub_etc.html">Etc.</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="ob"><!--이벤트 객체-->
+            <div class="set">
+                <img src="img/img_tv.png" alt="tv프레임">
+                <div class="box_vid">
+                    <img src="img/img_tv_noise.gif" alt="tv기본화면">
+                </div>
+            </div>
+        </div>
+
+        <div class="mark_up_list">
+            <ul>
+                <li>
+                    <a href="http://hwang1404.dothome.co.kr/" target="_blank">
+                        <div class="inner_li">
+                            <p class="mark_up_title">논픽션<br><em>Nonfiction</em></p>
+                            <span>개인작업</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://jin1404.dothome.co.kr/" target="_blank">
+                        <div class="inner_li">
+                            <p class="mark_up_title">헤라<br><em>HERA</em></p>
+                            <span>개인작업</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://mf1018.dothome.co.kr/" target="_blank">
+                        <div class="inner_li">
+                            <p class="mark_up_title">산리오<br><em>Sanrio</em></p>
+                            <span>팀작업</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://nubnub.dothome.co.kr/" target="_blank">
+                        <div class="inner_li">
+                            <p class="mark_up_title">00700</p>
+                            <span>팀작업</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <div class="info">
+        <p class="mail"><i class="fa fa-envelope-open-o" aria-hidden="true"></i> ghkd1404@daum.net</p>
+        <span>해당 사이트는 포트폴리오 목적으로 만든 사이트입니다.</span>
+    </div>
+    <div class="text">
+        <p><i class="fa fa-handshake-o" aria-hidden="true"></i>
+            <a href="sub_about.html"> &nbsp;Greetings!</a>
+        </p>
+        <p><i class="fa fa-hand-o-right" aria-hidden="true"></i> 
+            <a href="sub_work.html">&nbsp;Come check the work detail</a>
+        </p>
+    </div>
+
+
+
+
+    <script>
+        //header
+        $('header>button.M').click(function(){
+            $('header>button.M>span, header>.nav_M').toggleClass('on');
+        })
+
+        //main event
+        var area = document.querySelector('body');
+		var p = document.getElementById('ob');
+		
+		area.onmousemove = function(event) {   
+			var bodyW = $("body").width();
+			console.log(event.clientX + ', ' + event.clientY + ', ' + bodyW);    
+			var x = event.clientX;
+			var y = event.clientY;
+			p.style.transform = 'translate(' + ((-0.1 * bodyW) + x * 0.2) + 'px, ' + (y * 0.2 - 50) + 'px)';
+		}; 
+		area.onmouseout = function() {
+			p.style.transform = 'translate(0, 0)';
+		}
+
+        $('main>.mark_up_list>ul>li').mouseover(function(){
+            $(this).find('.inner_li').css('display','block');
+            $(this).siblings().find('.inner_li').css('display','none');
+            $(this).find('a').css('background','transparent');
+        })
+        $('main>.mark_up_list>ul>li').mouseleave(function(){
+            $(this).find('.inner_li').css('display','none');
+            $(this).siblings().find('.inner_li').css('display','none');
+            $(this).find('a').css('background','#000');
+        })
+
+        $('main>.mark_up_list>ul>li:nth-of-type(1)').mouseover(function(){
+            $('main #ob>.set>.box_vid>img').attr('src','img/img_tv_per.gif');
+        })
+        $('main>.mark_up_list>ul>li:nth-of-type(2)').mouseover(function(){
+            $('main #ob>.set>.box_vid>img').attr('src','img/img_tv_cos.gif');
+        })
+        $('main>.mark_up_list>ul>li:nth-of-type(3)').mouseover(function(){
+            $('main #ob>.set>.box_vid>img').attr('src','img/img_tv_cha.gif');
+        })
+        $('main>.mark_up_list>ul>li:nth-of-type(4)').mouseover(function(){
+            $('main #ob>.set>.box_vid>img').attr('src','img/img_tv_tele.gif');
+        })
+        $('main>.mark_up_list>ul>li').mouseleave(function(){
+            $('main #ob>.set>.box_vid>img').attr('src','img/img_tv_noise.gif');
+        })
+    </script>
+</body>
+</html>

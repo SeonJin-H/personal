@@ -1,0 +1,147 @@
+
+body{
+    background: url('../img/img_about_back\ copy.png') center center no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+}
+main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+main #ob{ 
+    position: absolute;
+    z-index: 100;
+    top: 380px;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    margin: -100px 0 0 -100px;
+}
+main #ob>.set{ 
+    position: absolute;
+    margin-top: 50px;
+}
+main #ob>.set>img{ 
+    position: absolute;
+    z-index: 200;
+    width: 200px;
+}
+main #ob>.set>.box_vid{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 150px;
+    height: 120px;
+}
+main #ob>.set>.box_vid>img{
+    width: 100%;
+    object-fit: cover;
+}
+main>.mark_up_list{ 
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto; 
+}
+main>.mark_up_list>ul{}
+main>.mark_up_list>ul>li{ 
+    position: absolute;
+    z-index: 100;
+    top: 200px;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+main>.mark_up_list>ul>li:nth-of-type(2){left: auto; right: 0;}
+main>.mark_up_list>ul>li:nth-of-type(3){top: 450px}
+main>.mark_up_list>ul>li:nth-of-type(4){top: 450px; left: auto; right: 0;}
+main>.mark_up_list>ul>li:nth-of-type(1){margin-bottom: 100px;}
+main>.mark_up_list>ul>li>a{ 
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    background: #000;
+}
+main>.mark_up_list>ul>li>a>.inner_li{
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: url('../img/img_a_back.png') center center no-repeat;
+    background-size: cover;
+    border-radius: 50%; 
+}
+main>.mark_up_list>ul>li>a>.inner_li>p{ 
+    padding: 55px 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+main>.mark_up_list>ul>li:last-of-type>a>.inner_li>p{ 
+    padding: 70px 0;
+}
+main>.mark_up_list>ul>li::before{
+    content: "Responsive";
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    font-size: 9px;
+}
+main>.mark_up_list>ul>li:last-of-type:before{
+    top: 60px;
+}
+main>.mark_up_list>ul>li>a>.inner_li>p>em{ 
+    display: block;
+    margin-top: -5px;
+    font-size: 0.8em;
+}
+main>.mark_up_list>ul>li>a>.inner_li>span{
+    position: absolute;
+    bottom: 35px;
+    right: 30px;
+    font-size: 9px;
+}
+main>.mark_up_list>ul>li:last-of-type>a>.inner_li>span{
+    bottom: 45px;
+}
+
+
+.info{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+.info>p.mail{margin-bottom: -5px;}
+.info>span{
+    font-size: 0.5em;
+}
+
+.text{
+    position: absolute;
+    bottom: 28vw;
+    right: 20px;
+}
+.text>p{text-align: right;}
+
+
+@media all and (max-width:1000px){
+    .text{bottom: auto; top: 90px; right: auto; left: 20px;}
+    .info>p.mail{font-size: 0.7em;}
+    .text>p{font-size: 0.7em; text-align: left;}
+}
+@media all and (max-width:700px){
+    main>.mark_up_list{width: 100%;}
+}
+@media all and (max-width:400px){
+    main #ob{top: 315px;}
+    main>.mark_up_list>ul>li{width: 110px; height: 110px;}
+    main>.mark_up_list>ul>li:nth-of-type(3){top: 350px}
+    main>.mark_up_list>ul>li:nth-of-type(4){top: 350px}
+    main>.mark_up_list>ul>li>a>.inner_li>p{ padding: 40px 0;font-size: 0.9rem;}
+    main>.mark_up_list>ul>li:last-of-type>a>.inner_li>p{ padding: 40px 0;}
+    main>.mark_up_list>ul>li::before{top: 30px;}
+    main>.mark_up_list>ul>li:last-of-type:before{top: 30px;}
+    main>.mark_up_list>ul>li>a>.inner_li>span{bottom: 25px;}
+    main>.mark_up_list>ul>li:last-of-type>a>.inner_li>span{bottom: 35px;}
+
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+	<link rel="stylesheet" href="css/sub_about.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>HSJ</title>
+</head>
+<body>
+    <header class="clearFix">
+        <h1>
+            <a href="index.html">HSJ</a>
+        </h1>
+        <div class="nav_P">
+            <ul>
+                <li>
+                    <a href="sub_about.html">About</a>
+                    <img src="img/img_highlighter_mark.png" alt="강조표시">
+                </li>
+                <li>
+                    <a href="sub_work.html">Work</a>
+                </li>
+                <li>
+                    <a href="sub_etc.html">Etc.</a>
+                </li>
+            </ul>
+        </div>
+        <button class="M">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav_M">
+            <ul>
+                <li>
+                    <a href="sub_about.html">About</a>
+                </li>
+                <li>
+                    <a href="sub_work.html">Work</a>
+                </li>
+                <li>
+                    <a href="sub_etc.html">Etc.</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="intro">
+            <div class="box1">
+                <img src="img/img_tv.png" alt="tv이미지">
+                <div class="box2">
+                    <img src="img/img_tv_cat.gif" alt="tv이미지">
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="about">
+            <ul class="personal">
+                <li>
+                    <h2>정보</h2>
+                    <h3>Profile</h3>
+                    <p>황선진</p>
+                    <p>1998.05.08</p>
+                </li>
+                <li>
+                    <h2>약력</h2>
+                    <h3>Brief History</h3>
+                    <p>더조은컴퓨터아카데미 UI/UX 과정</p>
+                    <p>한국농수산식품유통공사</p>
+                    <p>강원대학교 농업자원경제학과</p>
+                </li>
+            </ul>
+            <ul class="business">
+                <li>
+                    <h2>보유기술</h2>
+                    <h3>Skills</h3>
+                    <p>HTML5</p>
+                    <p>CSS3</p>
+                    <p>Javascript</p>
+                    <p>jQuery</p>
+                    <p>Photoshop</p>
+                    <p>Illustrator</p>
+                </li>
+                <li>
+                    <h2>자격사항</h2>
+                    <h3>Certification</h3>
+                    <p>웹디자인기능사</p>
+                    <p>컴퓨터그래픽스운용기능사</p>
+                    <p>GTQ포토샵 그래픽기술자격 1급</p>
+                    <p>컴퓨터활용능력 2급</p>
+                    <p>자동차운전면허증 2종</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+
+    <script>
+        //header
+         $('header>button.M').click(function(){
+            $('header>button.M>span, header>.nav_M').toggleClass('on');
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+main{
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+}
+main>.etc{ 
+    max-width: 1000px;
+    margin: 0 auto;
+}
+main>.etc>h2{ 
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+main>.etc>ul{
+}
+main>.etc>ul>li{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 30px 0;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px #d3d3d3;
+    text-align: center;
+}
+main>.etc>ul>li:nth-of-type(2){
+    flex-direction:row-reverse;
+}
+main>.etc>ul>li:nth-of-type(4){
+    flex-direction:row-reverse;
+}
+main>.etc>ul>li>.one_side{ 
+    width: 100%;
+}
+main>.etc>ul>li:first-of-type>.one_side{
+    background: url('../img/contents0.jpg') center center no-repeat;
+    background-size: cover;
+}
+main>.etc>ul>li:last-of-type>.one_side{
+    background: url('../img/contents1.jpg') center center no-repeat;
+    background-size: cover;
+}
+main>.etc>ul>li>.one_side>img{
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+main>.etc>ul>li>.other_side{
+    width: 50%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+main>.etc>ul>li>.other_side>h3{}
+main>.etc>ul>li>.other_side>h3>i{
+    position: absolute;
+    top: 40px;
+    margin-left: -20px;
+    font-size: 0.3em;
+    color: #999;
+}
+main>.etc>ul>li>.other_side>span{
+    display: block;
+    padding: 10px 0;
+}
+main>.etc>ul>li>.other_side>a.go{
+    display: block;
+    width: 130px;
+    line-height: 30px;
+    margin: 0 auto;
+    border: 1px solid #d3d3d3;
+    border-radius: 30px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+
+main>.etc>ul>li>.other_side>a.go:hover{
+    background: #333;
+    color: #fff;
+}
+
+@media all and (max-width:1000px){
+    main>.etc{max-width: 100%;}
+    main>.etc>ul{padding: 0 20px;}
+    .main>.etc>ul>li>.other_side{padding: 20px 10px;}
+}
+@media all and (max-width:550px){
+main{padding-top: 70px;
+}
+}

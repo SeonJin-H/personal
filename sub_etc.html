@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/sub_etc.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>HSJ</title>
+</head>
+<body>
+    <header class="clearFix">
+        <h1>
+            <a href="index.html">HSJ</a>
+        </h1>
+        <div class="nav_P">
+            <ul>
+                <li>
+                    <a href="sub_about.html">About</a>
+                    <img src="img/img_highlighter_mark.png" alt="강조표시">
+                </li>
+                <li>
+                    <a href="sub_work.html">Work</a>
+                </li>
+                <li>
+                    <a href="sub_etc.html">Etc.</a>
+                </li>
+            </ul>
+        </div>
+        <button class="M">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav_M">
+            <ul>
+                <li>
+                    <a href="sub_about.html">About</a>
+                </li>
+                <li>
+                    <a href="sub_work.html">Work</a>
+                </li>
+                <li>
+                    <a href="sub_etc.html">Etc.</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="etc">
+            <h2><i class="fa fa-wrench" aria-hidden="true"></i>공사중<br>일반 홈페이지 모음(비반응형)</h2>
+            <ul>
+                <li>
+                    <div class="one_side">
+                        <!--백그라운드 이미지-->
+                    </div>
+                    <div class="other_side">
+                        <h3>유한킴벌리<i>re-design</i></h3>
+                        <span>개인 프로젝트(기여 100%)</span>
+                        <a href="http://h0000.dothome.co.kr/" class="go" target="_blank">
+                            사이트 구경하기
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="one_side">
+                        <!--백그라운드 이미지-->
+                    </div>
+                    <div class="other_side">
+                        <h3>카카오<i>clone</i></h3>
+                        <span>팀 프로젝트(메인 일부 / 기여 33%)</span>
+                        <a href="http://h1111.dothome.co.kr/" class="go" target="_blank">
+                            사이트 구경하기
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+    <script>
+        //header
+         $('header>button.M').click(function(){
+            $('header>button.M>span, header>.nav_M').toggleClass('on');
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+	<link rel="stylesheet" href="css/sub_work.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>HSJ</title>
+</head>
+<body>
+    <header class="clearFix">
+        <h1>
+            <a href="index.html">HSJ</a>
+        </h1>
+        <div class="nav_P">
+            <ul>
+                <li>
+                    <a href="sub_about.html">About</a>
+                    <img src="img/img_highlighter_mark.png" alt="강조표시">
+                </li>
+                <li>
+                    <a href="sub_work.html">Work</a>
+                </li>
+                <li>
+                    <a href="sub_etc.html">Etc.</a>
+                </li>
+            </ul>
+        </div>
+        <button class="M">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav_M">
+            <ul>
+                <li>
+                    <a href="sub_about.html">About</a>
+                </li>
+                <li>
+                    <a href="sub_work.html">Work</a>
+                </li>
+                <li>
+                    <a href="sub_etc.html">Etc.</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="work">
+            <ul>
+                <li>
+                    <div class="one_side">
+                        <img src="img/mockup01_P.jpg" alt="mockup">
+                    </div>
+                    <div class="other_side">
+                        <h2>논픽션<i>Nonfiction</i></h2>
+                        <span>개인 프로젝트(기여 100%)</span>
+                        <p>브라우저 별 반응형 웹<br>
+                            js 스크롤 이벤트 동적 효과<br>
+                        </p>
+                        <a href="http://hwang1404.dothome.co.kr/" class="go" target="_blank">
+                            사이트 바로가기
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="one_side">
+                        <img src="img/mockup02_P.jpg" alt="mockup">
+                    </div>
+                    <div class="other_side">
+                        <h2>헤라<i>HERA</i></h2>
+                        <span>개인 프로젝트(기여 100%)</span>
+                        <p>브라우저 별 반응형 웹<br>
+                            js 슬라이드 무한루프 동적 효과<br>
+                             재생정지 버튼 기능 구현 
+                        </p>
+                        <a href="http://jin1404.dothome.co.kr/" class="go" target="_blank">
+                            사이트 바로가기
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="one_side">
+                        <img src="img/mockup03_P.jpg" alt="mockup">
+                    </div>
+                    <div class="other_side">
+                        <h2>산리오<i>Sanrio</i></h2>
+                        <span>팀 프로젝트(헤더푸터 및 메인일부 / 기여 40%)</span>
+                        <p>브라우저 별 반응형 웹<br>
+                            css 애니메이션 동적 효과<br>
+                             (메인 영역 아이콘)
+                        </p>
+                        <a href="http://mf1018.dothome.co.kr/" class="go" target="_blank">
+                            사이트 바로가기
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="one_side">
+                        <img src="img/mockup04_P.jpg" alt="mockup">
+                    </div>
+                    <div class="other_side">
+                        <h2>00700</h2>
+                        <span>팀 프로젝트(헤더푸터 / 기여 33%)</span>
+                        <p>브라우저 별 반응형 웹<br>
+                            css애니메이션 동적 효과<br>
+                            (메인 영역 진입이벤트)
+                        </p>
+                        <a href="http://nubnub.dothome.co.kr/" class="go" target="_blank">
+                            사이트 바로가기
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+    <script>
+        //header
+         $('header>button.M').click(function(){
+            $('header>button.M>span, header>.nav_M').toggleClass('on');
+        })
+
+    </script>
+</body>
+</html>

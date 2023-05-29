@@ -1,0 +1,102 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+*{margin: 0; padding: 0; font-family: 'Noto Sans KR'}
+a{text-decoration: none; color: inherit;}
+li{list-style:none;}
+em,b,address{font-style: normal;}
+button{border: none; outline: none; cursor: pointer; background: transparent; color: inherit;}
+.clearFix::after{content: ""; clear: both; display: block;} 
+
+header{ 
+    z-index: 300;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+header>h1{
+    float: left;
+}
+header>h1>a{}
+header>.nav_P{float: right;}
+header>.nav_P>ul{
+    display: flex;
+}
+header>.nav_P>ul>li{
+    position: relative;
+    width: 80px;
+    line-height: 45px;
+    margin: 14px 20px 0 0;
+}
+header>.nav_P>ul>li>a{ 
+    display: block;
+    text-align: center;
+}
+header>.nav_P>ul>li>img{
+    position: absolute;
+    top: 0;
+    left: -28px;
+    width: 40px;
+    animation: jump 1s ease infinite alternate;
+}
+header>.nav_P>ul>li:first-of-type{
+    background: url('../img/img_highlighter.png') center center no-repeat;
+    background-size: 90px;
+}
+
+header>button.M{
+    display: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+header>button.M>span{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 30px;
+    height: 1px;
+    background: #000;
+    transition: 0.3s;
+}
+header>button.M>span:nth-of-type(1){top: 12px;}
+header>button.M>span:nth-of-type(2){top: 22px;}
+header>button.M>span:nth-of-type(3){top: 32px;}
+
+header>button.M>span:nth-of-type(1).on{top: 25px; transform: rotate(45deg);}
+header>button.M>span:nth-of-type(2).on{top: 22px; right: -1000px;}
+header>button.M>span:nth-of-type(3).on{top: 25px; transform: rotate(-45deg);}
+
+header>.nav_M{ 
+    position: absolute;
+    z-index: 1000;
+    top: 50px;
+    right: 0;
+    width: 0;
+    height: 100vh;
+    transition: 0.5s;
+    background: #fff;
+}
+header>.nav_M>ul{}
+header>.nav_M>ul>li{
+    padding: 50px 30px;
+}
+header>.nav_M>ul>li>a{ 
+    font-size: 30px;
+}
+
+header>.nav_M.on{width: 100%;}
+
+@keyframes jump{
+	0%{
+		transform: translateY(-7px);
+	}
+}
+
+@media all and (max-width:700px){
+    header>.nav_P{display: none;}
+    header>button.M{display: block;}
+}

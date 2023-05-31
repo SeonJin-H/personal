@@ -22,29 +22,16 @@ Demo: <http://hsj98.dothome.co.kr>
 * 제이쿼리를 이용한 커서 위치변수 반영 동적 효과 이벤트 구축
 ![작동예시](https://github.com/SeonJin-H/personal/blob/main/event.png)
 ~~~
-var elem1 ="";
-var elem2 ="";
-$(window).scroll(function() {
+var area = document.querySelector('body');
+var p = document.getElementById('ob');
 
-    setTimeout(function(){
-        elem1 = $(window).scrollTop();
-    }, 10);
-
-    setTimeout(function(){
-        elem2 = $(window).scrollTop();
-    }, 20);
-    //내릴 때 변수1<변수2
-    //올릴 때 변수1>변수2
-
-    setTimeout(function(){
-        if(elem1 > elem2){ //올릴 때
-            $("#popUp").css('top', 0);
-        }
-        if(elem1 < elem2){ //내릴 때
-            $("#popUp").css('top', '-50px');
-        }
-    }, 20);
-});
+area.onmousemove = function(event) {   
+    var bodyW = $("body").width();
+    console.log(event.clientX + ', ' + event.clientY + ', ' + bodyW);    
+    var x = event.clientX;
+    var y = event.clientY;
+    p.style.transform = 'translate(' + ((-0.1 * bodyW) + x * 0.2) + 'px, ' + (y * 0.2 - 50) + 'px)';
+}; 
 ~~~
 
 * CSS 활용한 헤더 영역 애니메이션 이벤트 적용
